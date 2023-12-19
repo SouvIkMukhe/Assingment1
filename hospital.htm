@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4; /* Change this to your desired background color */
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            background-color: #4682b4;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            margin: 10px;
+        }
+
+        section {
+            position: relative;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        section img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        section .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000; /* Change this to your desired text color */
+            text-align: center;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        section form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            max-width: 300px;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input,
+        form select,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Style for all sections with tables */
+        section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            color: #000; /* Change this to your desired table content color */
+        }
+
+        section table, section table th, section table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Additional styles for text overlay within the image */
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000; /* Change this to your desired text color */
+            text-align: center;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="font-size: 2em;">Hospital Management System</h1>
+    </header>
+
+    <nav>
+        <div class="menu-item"><a href="#home">Home</a></div>
+        <div class="menu-item"><a href="#patient-registration">Patient Registration</a></div>
+        <div class="menu-item"><a href="#doctor-timing">Doctor Availability</a></div>
+        <div class="menu-item"><a href="#doctor-appointment">Doctor Appointment</a></div>
+        <div class="menu-item"><a href="#contact">Hospital Contact</a></div>
+        <div class="menu-item"><a href="#ambulance-booking">Book an Ambulance</a></div>
+        <div class="menu-item"><a href="#payment">Payment</a></div>
+        <div class="menu-item"><a href="#feedback">Feedback</a></div>
+    </nav>
+
+    <section id="home">
+        <img src="hospital home.jpg" alt="Hospital Homepage">
+        <div class="text-overlay">
+            <h2>Welcome to Hospital Management System</h2>
+            <p>"Welcome to Our Hospital: Where Care Meets Compassion and Healing Finds a Home. We're dedicated to providing exceptional healthcare with warmth and expertise. Your well-being is our priority, and we're here to accompany you on your journey toward better health".</p>
+        </div>
+    </section>
+
+    <section id="patient-registration">
+        <img src="patient registration.jpg" alt="Patient Registration">
+        <form id="patient-registration-form" action="#" method="post">
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name" required>
+
+            <label for="patient-age">Age:</label>
+            <input type="text" id="patient-age" name="patient-age" required>
+
+            <label for="patient-gender">Gender:</label>
+            <select id="patient-gender" name="patient-gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="patient-condition">Medical Condition:</label>
+            <textarea id="patient-condition" name="patient-condition" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="doctor-timing">
+        <img src="docavail.jpg" alt="Doctor Availability and Timing">
+        <div class="text-overlay">
+            <div class="chart-container">
+                <!-- Placeholder for a simple chart -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Doctor</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dr. Smith</td>
+                            <td>9 AM - 1 PM</td>
+                            <td>1 PM - 5 PM</td>
+                            <td>9 AM - 1 PM</td>
+                            <td>1 PM - 5 PM</td>
+                            <td>9 AM - 1 PM</td>
+                        </tr>
+                        <!-- Add more rows for other doctors -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <img src="contact.jpg" alt="Hospital Contact">
+        <div class="text-overlay">
+            <p>Get in touch with the hospital using the contact information provided on this page.</p>
+            
+            <!-- Additional contact information for ambulance services -->
+            <p>Ambulance Services:</p>
+            <ul>
+                <li>Emergency Contact: 911</li>
+                <li>Non-Emergency Contact: +1-555-1234</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="ambulance-booking">
+        <img src="ambulance.jpg" alt="Book an Ambulance">
+        <form id="ambulance-booking-form" action="#" method="post">
+            <label for="pickup-location">Pickup Location:</label>
+            <input type="text" id="pickup-location" name="pickup-location" required>
+
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="emergency">Emergency:</label>
+            <select id="emergency" name="emergency" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Book Ambulance</button>
+        </form>
+    </section>
+
+    <section id="payment">
+        <img src="payment.jpg" alt="Payment">
+        <form id="payment-form" action="#" method="post">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required>
+
+            <label for="expiration-date">Expiration Date:</label>
+            <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YYYY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" required>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </section>
+
+    <section id="feedback">
+        <img src="feedback.jpg" alt="Feedback">
+        <form id="feedback-form" action="#" method="post">
+            <label for="feedback-text">Your Feedback:</label>
+            <textarea id="feedback-text" name="feedback-text" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2002 Hospital Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
